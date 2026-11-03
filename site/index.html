@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>黑客书架 · Hacker News 读者推荐的书</title>
+<meta name="description" content="从 Hacker News 十九年的评论里，整理出一万五千多本被反复提起和推荐的书。">
+<meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1b1a18" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="fetch" href="/data/books-top.json" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/app.css">
+<script>try{var t=localStorage.getItem('hb.theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="打开导航" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <a class="brand" href="/" data-link>黑客书架<span>Hacker Books</span></a>
+  <form class="search" id="searchForm" role="search">
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+    <input id="q" type="search" placeholder="搜索书名或作者" autocomplete="off" aria-label="搜索书名或作者">
+    <kbd>/</kbd>
+  </form>
+  <div class="actions">
+    <a class="icon-btn" href="/shelf" data-link aria-label="我的书架" title="我的书架">
+      <svg viewBox="0 0 24 24" width="19" height="19"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+    </a>
+    <button class="icon-btn" id="themeBtn" aria-label="切换明暗" title="切换明暗">
+      <svg viewBox="0 0 24 24" width="19" height="19"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+    </button>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav class="nav" aria-label="主导航">
+      <a href="/" data-link>今日书架</a>
+      <a href="/top" data-link>历史总榜</a>
+      <a href="/recommended" data-link>最多推荐</a>
+      <a href="/rising" data-link>上升最快</a>
+      <a href="/lindy" data-link>林迪榜</a>
+      <a href="/shelf" data-link>我的书架</a>
+      <a href="/about" data-link>关于本站</a>
+    </nav>
+    <div id="topicNav" class="topic-nav"></div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <main id="main" tabindex="-1"><div class="loading">正在把书搬上书架…</div></main>
+</div>
+<noscript><p class="noscript">浏览书架需要启用 JavaScript。</p></noscript>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

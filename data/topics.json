@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {"name": "大众阅读", "slugs": ["fiction","science-fiction","fantasy","history","biography","politics-society","economics","business","startups","psychology","philosophy","religion","productivity","writing","popular-science","biology","physics","arts","lifestyle","other"]},
+    {"name": "技术与科学", "slugs": ["programming","software-engineering","computer-science","systems","web","security","ai-ml","data-statistics","math","hardware","design","lisp-functional"]}
+  ],
+  "labels": {
+    "fiction": "小说与文学", "science-fiction": "科幻", "fantasy": "奇幻", "history": "历史",
+    "biography": "传记与回忆录", "politics-society": "政治与社会", "economics": "经济与金融",
+    "business": "商业与管理", "startups": "创业", "psychology": "心理与行为", "philosophy": "哲学",
+    "religion": "宗教与灵性", "productivity": "效率与自我提升", "writing": "写作与语言",
+    "popular-science": "大众科普", "biology": "生物与医学", "physics": "物理与宇宙",
+    "arts": "艺术、游戏与媒体", "lifestyle": "饮食、旅行与生活", "other": "其他",
+    "programming": "编程", "software-engineering": "软件工程", "computer-science": "计算机科学",
+    "systems": "系统与操作系统", "web": "Web 与互联网", "security": "安全与隐私",
+    "ai-ml": "人工智能与机器学习", "data-statistics": "数据与统计", "math": "数学",
+    "hardware": "电子与硬件", "design": "设计与体验", "lisp-functional": "Lisp 与函数式"
+  }
+}
