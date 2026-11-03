@@ -344,12 +344,31 @@ document.getElementById('q').addEventListener('input', (e) => {
 const menuBtn = document.getElementById('menuBtn');
 menuBtn.addEventListener('click', () => { const o = document.body.classList.toggle('nav-open'); menuBtn.setAttribute('aria-expanded', o); });
 document.getElementById('scrim').addEventListener('click', () => document.body.classList.remove('nav-open'));
-document.getElementById('themeBtn').addEventListener('click', () => {
-  const cur = document.documentElement.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  const next = cur === 'dark' ? 'light' : 'dark';
-  document.documentElement.dataset.theme = next;
-  try { localStorage.setItem('hb.theme', next); } catch {}
+// theme: light (米白) / blue (淡蓝) / dark (深色) / auto (跟随系统)
+const themeBtn = document.getElementById('themeBtn');
+const themeMenu = document.getElementById('themeMenu');
+const THEME_COLOR = { light: '#faf8f4', blue: '#f2f7fc', dark: '#1b1a18' };
+function applyTheme(t) {
+  const root = document.documentElement;
+  if (t === 'auto') delete root.dataset.theme; else root.dataset.theme = t;
+  try { t === 'auto' ? localStorage.removeItem('hb.theme') : localStorage.setItem('hb.theme', t); } catch {}
+  const eff = t === 'auto' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : t;
+  document.querySelectorAll('meta[name="theme-color"]').forEach((m) => m.setAttribute('content', THEME_COLOR[eff]));
+  themeMenu.querySelectorAll('[data-theme-set]').forEach((b) => b.setAttribute('aria-checked', b.dataset.themeSet === t));
+}
+function closeThemeMenu() { themeMenu.hidden = true; themeBtn.setAttribute('aria-expanded', 'false'); }
+themeBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  themeMenu.hidden = !themeMenu.hidden;
+  themeBtn.setAttribute('aria-expanded', String(!themeMenu.hidden));
+  if (!themeMenu.hidden) themeMenu.querySelector('[aria-checked="true"]')?.focus();
 });
+themeMenu.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-theme-set]');
+  if (b) { applyTheme(b.dataset.themeSet); closeThemeMenu(); themeBtn.focus(); }
+});
+document.addEventListener('click', (e) => { if (!themeMenu.hidden && !e.target.closest('.theme-wrap')) closeThemeMenu(); });
+applyTheme(document.documentElement.dataset.theme || 'auto');
 
 // keyboard
 let kbIndex = -1, gPending = false;
@@ -364,6 +383,7 @@ document.addEventListener('keydown', (e) => {
   const inField = /INPUT|TEXTAREA/.test(document.activeElement?.tagName);
   if (e.key === 'Escape') {
     if (inField) { document.activeElement.blur(); return; }
+    if (!themeMenu.hidden) { closeThemeMenu(); themeBtn.focus(); return; }
     if (document.body.classList.contains('nav-open')) { document.body.classList.remove('nav-open'); return; }
     if (location.pathname.startsWith('/b/')) history.back();
     return;

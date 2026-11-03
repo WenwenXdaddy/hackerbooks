@@ -11,7 +11,7 @@
 <link rel="preload" as="fetch" href="/data/books-top.json" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="/app.css">
-<script>try{var t=localStorage.getItem('hb.theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>try{var t=localStorage.getItem('hb.theme');if(t==='light'||t==='blue'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">跳到正文</a>
@@ -29,9 +29,17 @@
     <a class="icon-btn" href="/shelf" data-link aria-label="我的书架" title="我的书架">
       <svg viewBox="0 0 24 24" width="19" height="19"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
     </a>
-    <button class="icon-btn" id="themeBtn" aria-label="切换明暗" title="切换明暗">
-      <svg viewBox="0 0 24 24" width="19" height="19"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
-    </button>
+    <div class="theme-wrap">
+      <button class="icon-btn" id="themeBtn" aria-label="主题" title="主题" aria-haspopup="menu" aria-expanded="false" aria-controls="themeMenu">
+        <svg viewBox="0 0 24 24" width="19" height="19"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor" stroke="none"/></svg>
+      </button>
+      <div class="theme-menu" id="themeMenu" role="menu" aria-label="选择主题" hidden>
+        <button role="menuitemradio" data-theme-set="light"><i class="sw sw-light"></i>米白</button>
+        <button role="menuitemradio" data-theme-set="blue"><i class="sw sw-blue"></i>淡蓝</button>
+        <button role="menuitemradio" data-theme-set="dark"><i class="sw sw-dark"></i>深色</button>
+        <button role="menuitemradio" data-theme-set="auto"><i class="sw sw-auto"></i>跟随系统</button>
+      </div>
+    </div>
   </div>
 </header>
 <div class="layout">
