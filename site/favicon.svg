@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#223d5a"/><g transform="translate(420 92)"><g><circle r="39.6" fill="#ffd27a" opacity=".16"/><path d="M0 -44 C 7.04 -7.04 7.04 -7.04 44 0 C 7.04 7.04 7.04 7.04 0 44 C -7.04 7.04 -7.04 7.04 -44 0 C -7.04 -7.04 -7.04 -7.04 0 -44 Z" fill="#ffd98c"/><animate attributeName="opacity" values="1;.25;1" dur="2.6s" begin="0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="1;.62;1" dur="2.6s" begin="0s" repeatCount="indefinite"/></g></g>
-  <g transform="translate(256 256) scale(1.08) translate(-256 -262)">
+  <rect width="512" height="512" rx="112" fill="#223d5a"/><g transform="translate(404 104)"><g><circle r="59.4" fill="#ffd27a" opacity=".16"/><path d="M0 -66 C 10.56 -10.56 10.56 -10.56 66 0 C 10.56 10.56 10.56 10.56 0 66 C -10.56 10.56 -10.56 10.56 -66 0 C -10.56 -10.56 -10.56 -10.56 0 -66 Z" fill="#ffd98c"/><animate attributeName="opacity" values="1;.25;1" dur="2.6s" begin="0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="1;.62;1" dur="2.6s" begin="0s" repeatCount="indefinite"/></g></g>
+  <g transform="translate(236 276) scale(.98) translate(-256 -262)">
   <!-- body with ear tufts -->
   <path d="M170 112 L 214 160 Q 256 148 298 160 L 342 112 C 364 158 374 204 372 256 C 370 330 322 384 256 384 C 190 384 142 330 140 256 C 138 204 148 158 170 112 Z" fill="#d9b98c"/>
   <!-- wings -->

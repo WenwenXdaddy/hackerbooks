@@ -56,7 +56,9 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round
   backdrop-filter: saturate(1.4) blur(12px); -webkit-backdrop-filter: saturate(1.4) blur(12px);
   border-bottom: 1px solid var(--line);
 }
-.brand { font-family: var(--serif); font-weight: 600; font-size: 21px; letter-spacing: .1em; white-space: nowrap; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 21px; letter-spacing: .1em; white-space: nowrap; }
+.brand b { font-weight: 600; }
+.logo { width: 32px; height: 32px; flex: none; display: block; overflow: visible; }
 .brand span { font-style: italic; font-weight: 400; letter-spacing: 0; font-size: 14px; color: var(--mute); margin-left: 8px; }
 .search {
   flex: 1; min-width: 0; max-width: 460px; margin: 0 auto; display: flex; align-items: center; gap: 8px;
@@ -191,7 +193,8 @@ dialog dt kbd { font: 12px var(--sans); border: 1px solid var(--line); border-ra
 @media (max-width: 900px) {
   .menu-btn { display: grid; }
   .brand span, .search kbd, .actions a.icon-btn { display: none; }
-  .brand { font-size: 19px; letter-spacing: .06em; }
+  .brand { font-size: 19px; letter-spacing: .06em; gap: 8px; }
+  .logo { width: 28px; height: 28px; }
   .topbar { padding: 0 12px 0 8px; gap: 8px; }
   .layout { grid-template-columns: minmax(0, 1fr); }
   .sidebar {

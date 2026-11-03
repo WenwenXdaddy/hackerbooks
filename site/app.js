@@ -410,6 +410,12 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// the logo's star twinkles (SMIL); hold it still for people who prefer less motion
+const motionQuery = matchMedia('(prefers-reduced-motion: reduce)');
+const syncLogoMotion = () => { const l = document.querySelector('.logo'); if (l) motionQuery.matches ? l.pauseAnimations() : l.unpauseAnimations(); };
+motionQuery.addEventListener?.('change', syncLogoMotion);
+syncLogoMotion();
+
 renderTopicNav();
 route();
 loadAll(); // warm the full index in the background
