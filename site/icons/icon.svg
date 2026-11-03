@@ -2,6 +2,9 @@
   <!-- 黑客书架：捧着书的猫头鹰（阅读 · 智慧），镜头般的眼睛与书页上的神经网络代表 AI -->
   <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d4d70"/><stop offset="1" stop-color="#1a2f47"/></linearGradient></defs>
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- twinkling stars -->
+  <g transform="translate(402 104)"><g><circle r="27.0" fill="#ffd27a" opacity=".16"/><path d="M0 -30 C 4.8 -4.8 4.8 -4.8 30 0 C 4.8 4.8 4.8 4.8 0 30 C -4.8 4.8 -4.8 4.8 -30 0 C -4.8 -4.8 -4.8 -4.8 0 -30 Z" fill="#ffd98c"/><animate attributeName="opacity" values="1;.25;1" dur="2.6s" begin="0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="1;.62;1" dur="2.6s" begin="0s" repeatCount="indefinite"/></g></g>
+  <g transform="translate(446 160)"><g><circle r="11.7" fill="#ffd27a" opacity=".16"/><path d="M0 -13 C 2.08 -2.08 2.08 -2.08 13 0 C 2.08 2.08 2.08 2.08 0 13 C -2.08 2.08 -2.08 2.08 -13 0 C -2.08 -2.08 -2.08 -2.08 0 -13 Z" fill="#ffd98c"/><animate attributeName="opacity" values="1;.25;1" dur="2.6s" begin="1.3s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="1;.62;1" dur="2.6s" begin="1.3s" repeatCount="indefinite"/></g></g>
   <!-- body with ear tufts -->
   <path d="M170 112 L 214 160 Q 256 148 298 160 L 342 112 C 364 158 374 204 372 256 C 370 330 322 384 256 384 C 190 384 142 330 140 256 C 138 204 148 158 170 112 Z" fill="#d9b98c"/>
   <!-- wings -->

@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d4d70"/><stop offset="1" stop-color="#1a2f47"/></linearGradient></defs>
   <rect width="512" height="512" fill="url(#bg)"/>
+  <!-- twinkling stars -->
+  <g transform="translate(372 140)"><g><circle r="27.0" fill="#ffd27a" opacity=".16"/><path d="M0 -30 C 4.8 -4.8 4.8 -4.8 30 0 C 4.8 4.8 4.8 4.8 0 30 C -4.8 4.8 -4.8 4.8 -30 0 C -4.8 -4.8 -4.8 -4.8 0 -30 Z" fill="#ffd98c"/></g></g>
+  <g transform="translate(408 186)"><g><circle r="11.7" fill="#ffd27a" opacity=".16"/><path d="M0 -13 C 2.08 -2.08 2.08 -2.08 13 0 C 2.08 2.08 2.08 2.08 0 13 C -2.08 2.08 -2.08 2.08 -13 0 C -2.08 -2.08 -2.08 -2.08 0 -13 Z" fill="#ffd98c"/></g></g>
   <g transform="translate(256 262) scale(.84) translate(-256 -262)">
   <!-- body with ear tufts -->
   <path d="M170 112 L 214 160 Q 256 148 298 160 L 342 112 C 364 158 374 204 372 256 C 370 330 322 384 256 384 C 190 384 142 330 140 256 C 138 204 148 158 170 112 Z" fill="#d9b98c"/>
