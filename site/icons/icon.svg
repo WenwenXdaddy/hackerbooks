@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- 黑客书架：读书的猫头鹰（阅读 · 智慧），天线与发光的眼睛是 AI 的传感器 -->
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d4d70"/><stop offset="1" stop-color="#1a2f47"/></linearGradient></defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <g stroke="#f3e9d8" stroke-width="12" stroke-linecap="round"><path d="M184 168 L 168 128"/><path d="M328 168 L 344 128"/></g>
+  <circle cx="165" cy="121" r="13" fill="#ffd27a"/><circle cx="347" cy="121" r="13" fill="#ffd27a"/>
+  <circle cx="165" cy="121" r="24" fill="#ffd27a" opacity=".18"/><circle cx="347" cy="121" r="24" fill="#ffd27a" opacity=".18"/>
+  <path d="M164 276 C 164 202 204 164 256 164 C 308 164 348 202 348 276 Z" fill="#f3e9d8"/>
+  <circle cx="214" cy="232" r="32" fill="#1c324b"/><circle cx="298" cy="232" r="32" fill="#1c324b"/>
+  <circle cx="214" cy="232" r="22" fill="#ffd27a" opacity=".22"/><circle cx="298" cy="232" r="22" fill="#ffd27a" opacity=".22"/>
+  <circle cx="214" cy="232" r="12" fill="#ffd27a"/><circle cx="298" cy="232" r="12" fill="#ffd27a"/>
+  <path d="M245 260 L 256 279 L 267 260 Z" fill="#e0a24e"/>
+  <path d="M256 396 C 214 370 166 364 118 374 V 288 C 166 278 214 284 256 310 C 298 284 346 278 394 288 V 374 C 346 364 298 370 256 396 Z" fill="#fbf6ee"/>
+  <path d="M256 310 V 396" stroke="#c9d6e3" stroke-width="6"/>
+  <g stroke="#9fb4c9" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M148 320 C 178 314 208 316 232 326"/><path d="M148 344 C 178 338 208 340 232 350"/>
+    <path d="M364 320 C 334 314 304 316 280 326"/><path d="M364 344 C 334 338 304 340 280 350"/>
+  </g>
+</svg>

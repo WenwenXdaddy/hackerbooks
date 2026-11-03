@@ -1,0 +1,22 @@
+{
+  "name": "黑客书架 · Hacker News 读者推荐的书",
+  "short_name": "黑客书架",
+  "description": "从 Hacker News 十九年的评论里，整理出一万五千多本被反复提起和推荐的书。",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#faf8f4",
+  "theme_color": "#223d5a",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "历史总榜", "url": "/top" },
+    { "name": "上升最快", "url": "/rising" },
+    { "name": "我的书架", "url": "/shelf" }
+  ]
+}
