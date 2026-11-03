@@ -18,6 +18,7 @@ pipeline/            数据流水线（Python 标准库，无第三方依赖）
   fetch_upstream.py  下载 hackerbooks.org 的 CSV
   covers.py          批量查询 Open Library 封面 id（每次 100 本）
   comments.py        通过 HN Algolia 抓取评论摘录与近一年提及数（可断点续跑）
+  translate.py       用 Cloudflare Workers AI 为新书生成中文书名与推荐语（不覆盖已有条目）
   build.py           合并为站点 JSON：site/data/books.json 等
 data/
   upstream/          上游 CSV
@@ -44,3 +45,13 @@ npx wrangler pages dev site        # 本地预览（含 Functions）
 3. 部署完成后在项目的 Custom domains 中添加 `books.jiadi.ai`
 
 推送到 `main` 即自动部署；GitHub Actions 每周更新数据后也会触发部署。
+
+## 新书自动翻译（Cloudflare Workers AI）
+
+在仓库 Settings → Secrets and variables → Actions 中添加：
+
+- Secret `CLOUDFLARE_ACCOUNT_ID`：Cloudflare 账户 ID
+- Secret `CLOUDFLARE_API_TOKEN`：权限包含 **Workers AI: Read/Edit** 的 API Token
+- （可选）Variable `CF_AI_MODEL`：模型名，默认 `@cf/qwen/qwen3-30b-a3b-fp8`
+
+未配置时该步骤会自动跳过，新书保留英文书名。

@@ -34,6 +34,13 @@ jobs:
       - name: Refresh stats for the top 3000 books (older than 27 days)
         run: python pipeline/comments.py --top 3000 --refresh-days 27
 
+      - name: Translate new books (Cloudflare Workers AI)
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_AI_MODEL: ${{ vars.CF_AI_MODEL }}
+        run: python pipeline/translate.py
+
       - name: Build site data
         run: python pipeline/build.py
 
