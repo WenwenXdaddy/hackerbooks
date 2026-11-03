@@ -1,19 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- 黑客书架：读书的猫头鹰（阅读 · 智慧），天线与发光的眼睛是 AI 的传感器 -->
+  <!-- 黑客书架：捧着书的猫头鹰（阅读 · 智慧），镜头般的眼睛与书页上的神经网络代表 AI -->
   <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d4d70"/><stop offset="1" stop-color="#1a2f47"/></linearGradient></defs>
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <g stroke="#f3e9d8" stroke-width="12" stroke-linecap="round"><path d="M184 168 L 168 128"/><path d="M328 168 L 344 128"/></g>
-  <circle cx="165" cy="121" r="13" fill="#ffd27a"/><circle cx="347" cy="121" r="13" fill="#ffd27a"/>
-  <circle cx="165" cy="121" r="24" fill="#ffd27a" opacity=".18"/><circle cx="347" cy="121" r="24" fill="#ffd27a" opacity=".18"/>
-  <path d="M164 276 C 164 202 204 164 256 164 C 308 164 348 202 348 276 Z" fill="#f3e9d8"/>
-  <circle cx="214" cy="232" r="32" fill="#1c324b"/><circle cx="298" cy="232" r="32" fill="#1c324b"/>
-  <circle cx="214" cy="232" r="22" fill="#ffd27a" opacity=".22"/><circle cx="298" cy="232" r="22" fill="#ffd27a" opacity=".22"/>
-  <circle cx="214" cy="232" r="12" fill="#ffd27a"/><circle cx="298" cy="232" r="12" fill="#ffd27a"/>
-  <path d="M245 260 L 256 279 L 267 260 Z" fill="#e0a24e"/>
-  <path d="M256 396 C 214 370 166 364 118 374 V 288 C 166 278 214 284 256 310 C 298 284 346 278 394 288 V 374 C 346 364 298 370 256 396 Z" fill="#fbf6ee"/>
-  <path d="M256 310 V 396" stroke="#c9d6e3" stroke-width="6"/>
-  <g stroke="#9fb4c9" stroke-width="6" stroke-linecap="round" fill="none">
-    <path d="M148 320 C 178 314 208 316 232 326"/><path d="M148 344 C 178 338 208 340 232 350"/>
-    <path d="M364 320 C 334 314 304 316 280 326"/><path d="M364 344 C 334 338 304 340 280 350"/>
-  </g>
+  <!-- body with ear tufts -->
+  <path d="M170 112 L 214 160 Q 256 148 298 160 L 342 112 C 364 158 374 204 372 256 C 370 330 322 384 256 384 C 190 384 142 330 140 256 C 138 204 148 158 170 112 Z" fill="#d9b98c"/>
+  <!-- wings -->
+  <path d="M146 250 C 150 310 176 352 214 372 C 186 330 176 290 180 246 Z" fill="#b8925f"/>
+  <path d="M366 250 C 362 310 336 352 298 372 C 326 330 336 290 332 246 Z" fill="#b8925f"/>
+  <!-- facial disc -->
+  <circle cx="212" cy="222" r="50" fill="#f6ead6"/><circle cx="300" cy="222" r="50" fill="#f6ead6"/>
+  <!-- eyes: camera-lens irises -->
+  <circle cx="212" cy="222" r="31" fill="#1c324b"/><circle cx="300" cy="222" r="31" fill="#1c324b"/>
+  <circle cx="212" cy="222" r="22" fill="none" stroke="#ffc861" stroke-width="7"/><circle cx="300" cy="222" r="22" fill="none" stroke="#ffc861" stroke-width="7"/>
+  <circle cx="212" cy="222" r="9" fill="#ffc861"/><circle cx="300" cy="222" r="9" fill="#ffc861"/>
+  <circle cx="221" cy="212" r="5" fill="#fff8e8"/><circle cx="309" cy="212" r="5" fill="#fff8e8"/>
+  <!-- beak -->
+  <path d="M243 252 L 256 282 L 269 252 Q 256 244 243 252 Z" fill="#e39a3b"/>
+
+  <!-- open book held in front -->
+  <path d="M256 418 C 212 392 162 386 110 396 V 326 C 162 316 212 322 256 348 C 300 322 350 316 402 326 V 396 C 350 386 300 392 256 418 Z" fill="#fbf6ee"/>
+  <path d="M256 348 V 418" stroke="#c9d6e3" stroke-width="6"/>
+  <!-- left page: text; right page: a small neural network -->
+  <g stroke="#9fb4c9" stroke-width="6" stroke-linecap="round" fill="none"><path d="M140 356 C 172 350 204 352 230 362"/><path d="M140 378 C 172 372 204 374 230 384"/></g>
+  <g stroke="#7f9ab5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M292 364 L 322 350 L 362 360 L 344 384 L 292 364 M322 350 L 344 384"/></g>
+  <g fill="#2f6ea8"><circle cx="292" cy="364" r="6.5"/><circle cx="322" cy="350" r="6.5"/><circle cx="362" cy="360" r="6.5"/><circle cx="344" cy="384" r="6.5"/></g>
+  <!-- talons over the book edge -->
+  <g fill="#e39a3b"><path d="M206 338 q 6 -14 12 0 z M220 336 q 6 -14 12 0 z"/><path d="M280 336 q 6 -14 12 0 z M294 338 q 6 -14 12 0 z"/></g>
 </svg>

@@ -1,9 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" rx="112" fill="#223d5a"/>
-  <g stroke="#f3e9d8" stroke-width="20" stroke-linecap="round"><path d="M184 168 L 164 120"/><path d="M328 168 L 348 120"/></g>
-  <circle cx="162" cy="114" r="22" fill="#ffd27a"/><circle cx="350" cy="114" r="22" fill="#ffd27a"/>
-  <path d="M160 280 C 160 200 202 160 256 160 C 310 160 352 200 352 280 Z" fill="#f3e9d8"/>
-  <circle cx="212" cy="232" r="36" fill="#1c324b"/><circle cx="300" cy="232" r="36" fill="#1c324b"/>
-  <circle cx="212" cy="232" r="17" fill="#ffd27a"/><circle cx="300" cy="232" r="17" fill="#ffd27a"/>
-  <path d="M256 404 C 212 376 162 370 110 380 V 290 C 162 280 212 286 256 314 C 300 286 350 280 402 290 V 380 C 350 370 300 376 256 404 Z" fill="#fbf6ee"/>
+  <g transform="translate(256 256) scale(1.08) translate(-256 -262)">
+  <!-- body with ear tufts -->
+  <path d="M170 112 L 214 160 Q 256 148 298 160 L 342 112 C 364 158 374 204 372 256 C 370 330 322 384 256 384 C 190 384 142 330 140 256 C 138 204 148 158 170 112 Z" fill="#d9b98c"/>
+  <!-- wings -->
+  <path d="M146 250 C 150 310 176 352 214 372 C 186 330 176 290 180 246 Z" fill="#b8925f"/>
+  <path d="M366 250 C 362 310 336 352 298 372 C 326 330 336 290 332 246 Z" fill="#b8925f"/>
+  <!-- facial disc -->
+  <circle cx="212" cy="222" r="50" fill="#f6ead6"/><circle cx="300" cy="222" r="50" fill="#f6ead6"/>
+  <!-- eyes: camera-lens irises -->
+  <circle cx="212" cy="222" r="31" fill="#1c324b"/><circle cx="300" cy="222" r="31" fill="#1c324b"/>
+  <circle cx="212" cy="222" r="22" fill="none" stroke="#ffc861" stroke-width="7"/><circle cx="300" cy="222" r="22" fill="none" stroke="#ffc861" stroke-width="7"/>
+  <circle cx="212" cy="222" r="9" fill="#ffc861"/><circle cx="300" cy="222" r="9" fill="#ffc861"/>
+  <!-- beak -->
+  <path d="M243 252 L 256 282 L 269 252 Q 256 244 243 252 Z" fill="#e39a3b"/>
+  <!-- open book held in front -->
+  <path d="M256 418 C 212 392 162 386 110 396 V 326 C 162 316 212 322 256 348 C 300 322 350 316 402 326 V 396 C 350 386 300 392 256 418 Z" fill="#fbf6ee"/>
+  <path d="M256 348 V 418" stroke="#c9d6e3" stroke-width="6"/>
+  <!-- talons over the book edge -->
+  <g fill="#e39a3b"><path d="M206 338 q 6 -14 12 0 z M220 336 q 6 -14 12 0 z"/><path d="M280 336 q 6 -14 12 0 z M294 338 q 6 -14 12 0 z"/></g>
+  </g>
 </svg>
