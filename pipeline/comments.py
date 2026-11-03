@@ -84,7 +84,17 @@ def fetch_book(b: dict, keep: int) -> dict:
         s += 1.0 if 150 <= len(text) <= 1200 else -1.0
         s -= 0.5 * max(0, len(re.findall(r"\n\s*[-*\d]", text)) - 2)  # long lists of books
         s -= 0.3 * max(0, len(re.findall(r"\bby [A-Z]", text)) - 1)
-        s += 0.5 if m.start() < 200 else 0.0
+        s += 1.0 if m.start() < 120 else (0.4 if m.start() < 250 else 0.0)
+        line = text[text.rfind("\n", 0, m.start()) + 1:m.start()]
+        if re.match(r"\s*([-*\u2022]|\d+[.)])\s", line):  # the title is just an item in a list
+            s -= 1.5
+        if m.group(0).islower() and not title.islower() and " " in title:
+            s -= 2.0  # "clean code" the phrase, not "Clean Code" the book
+        short_paras = [p for p in re.split(r"\n\s*\n", text) if 0 < len(p.strip()) < 60]
+        if len(short_paras) >= 3:  # one title per paragraph: a reading list
+            s -= 1.5
+        # "Title - Author" style lists of several books read as catalogues, not recommendations
+        s -= 0.8 * max(0, len(re.findall(r"^[^\n]{3,80} - [A-Z][^\n]{2,40}$", text, re.M)) - 1)
         scored.append((s, h["created_at_i"], {
             "id": h["objectID"], "by": h.get("author"), "t": h["created_at_i"],
             "sid": h.get("story_id"), "st": h.get("story_title") or "",
@@ -102,6 +112,7 @@ if __name__ == "__main__":
                     help="re-fetch books whose data is older than D days")
     ap.add_argument("--delay", type=float, default=0.5, help="pause per book per worker (rate limit)")
     ap.add_argument("--workers", type=int, default=3)
+    ap.add_argument("--force", action="store_true", help="re-fetch every selected book")
     args = ap.parse_args()
 
     books = read_books()
@@ -118,7 +129,7 @@ if __name__ == "__main__":
     todo = []
     for b in books:
         cur = shard(shard_of(b["openlibrary_work"])).get(b["openlibrary_work"], {}).get("hn")
-        if cur is None or (cutoff and cur["fetched"] < cutoff):
+        if args.force or cur is None or (cutoff and cur["fetched"] < cutoff):
             todo.append(b)
     if args.limit:
         todo = todo[:args.limit]
